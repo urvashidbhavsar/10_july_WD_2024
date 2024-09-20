@@ -17,3 +17,4 @@ Set up theme
 set plugins
 1. elementor
 2. disable gutenburg
+3. metaslider
