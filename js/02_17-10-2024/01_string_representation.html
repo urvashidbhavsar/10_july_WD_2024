@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-family: sans-serif;
+            text-transform: capitalize;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var empname = "Priyank";
+
+        document.write("<p>", empname, " is a employee of company </p>");
+        // before ES6
+        document.write("<p>" + empname + " is a employee of company </p>");
+
+        // after ES6
+        document.write(`<p>
+            ${empname} is a employee of the company
+            </p>`)
+    </script>
+</body>
+
+</html>
