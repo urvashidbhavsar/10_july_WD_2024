@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 30px;
+            padding: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body onunload="show()">
+    <!-- onload = when finish the loading -->
+    <!--  oncontextmenu="return false" -->
+    <!-- onresize = do not allow the resize -->
+    <!-- onscroll = when scroll the page -->
+
+    <!-- <button onclick="show()">click here</button> -->
+    <!-- <button ondblclick="show()">click here</button> -->
+
+    <!-- onmousedown = click on element -->
+    <!-- onmouseup = when user release a button -->
+    <!-- onmouseenter = when user enter on an element -->
+    <!-- onmouseleave = when user leave from an element -->
+    <!-- onmousemove = when mouse move on an element -->
+    <!-- onmouseout => when user out from an element parent as well as child -->
+    <!-- onmouseover => when user over an element parent as well as child -->
+    <!-- onmousewheel => when user scroll mouse button -->
+    <!--  onkeydown => when user press down any key -->
+    <!-- onkeypress => mainly effected on alpha and numbers -->
+    <!-- onkeyup => when user release the key -->
+
+    <div class="parent" onmouseup="show()">parent
+        <div class="child">child</div>
+    </div>
+    <input type="text" name="" id="" onkeyup="show()">
+
+    <script>
+        function show() {
+            alert("Hello User");
+        }
+    </script>
+</body>
+
+</html>
