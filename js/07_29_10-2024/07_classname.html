@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* create any random class to apply using js */
+        .setpara {
+            width: 400px;
+            padding: 20px;
+            border: 2px solid blue;
+            background-color: lightseagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="changeCss()">Add css</button>
+    <hr>
+
+    <p id="mypara" class="mypara">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia maiores quaerat aut possimus consequatur earum
+        quo nobis iusto dolorum similique! Qui iste numquam sed maxime, ab deserunt alias iusto quam.
+    </p>
+
+    <script>
+        function changeCss() {
+            // classname replace an existing class
+            let p = document.querySelector("#mypara");
+            if (p.className == "mypara") {
+                p.className = "setpara"
+            } else {
+                p.className = "mypara"
+            }
+        }
+    </script>
+</body>
+
+</html>

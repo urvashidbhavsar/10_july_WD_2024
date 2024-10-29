@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1,
+        .div2 {
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+        }
+
+        /* create any random class to apply using js */
+        .box {
+            background-color: saddlebrown;
+        }
+
+        .box2 {
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addCss()">Add</button>
+    <button onclick="RemoveCss()">Remove</button>
+    <button onclick="ToggleCss()">Toggle</button>
+    <button onclick="CheckCss()">Contains</button>
+
+
+    <hr>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <script>
+        function addCss() {
+            let div1 = document.querySelector(".div1")
+            div1.classList.add("box")
+        }
+        function RemoveCss() {
+            let div1 = document.querySelector(".div1")
+            div1.classList.remove("box")
+        }
+        function ToggleCss() {
+            let div2 = document.querySelector(".div2")
+            div2.classList.toggle("box2")
+        }
+        function CheckCss() {
+            let div2 = document.querySelector(".div2")
+            if (div2.classList.contains("box2")) {
+                alert("Class Exist")
+            } else {
+                alert("Class not Exist")
+            }
+        }
+    </script>
+</body>
+
+</html>

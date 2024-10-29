@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+        }
+
+        .parent,
+        .child {
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- class selection -->
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        var b = document.querySelectorAll(".box");
+        for (let i = 0; i < b.length; i++) {
+            b[i].style.backgroundColor = "green"
+        }
+    </script>
+
+    <!-- element selection -->
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        var para = document.querySelectorAll("p");
+        for (let i = 0; i < para.length; i++) {
+            para[i].innerHTML = "Get by element"
+        }
+    </script>
+
+    <!-- group selector -->
+    <h1 class="h1"></h1>
+    <h2></h2>
+    <h3></h3>
+
+    <script>
+        var grp = document.querySelectorAll(".h1,h2,h3")
+        for (let i = 0; i < grp.length; i++) {
+            grp[i].innerHTML = "group selection"
+            grp[i].style.color = "Crimson"
+        }
+    </script>
+
+    <!-- combinator -->
+    <div class="parent">Parent
+        <div class="child">Child</div>
+        <div class="child">Child</div>
+    </div>
+
+    <script>
+        let child = document.querySelectorAll(".parent .child");
+        child[0].style.border = "5px solid red"
+    </script>
+</body>
+
+</html>
