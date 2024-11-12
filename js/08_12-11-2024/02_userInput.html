@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 30%;
+            margin: 100px auto;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+
+        input {
+            height: 25px;
+            width: 95%;
+            padding: 5px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            border: 1px solid gray;
+        }
+
+        :focus-visible {
+            outline: none;
+        }
+
+        .field {
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        #err {
+            color: red;
+        }
+
+        .error {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- onchange="return checkValidate()" onblur="return checkValidate()" -->
+    <form action="#" onsubmit="return checkValidate()">
+        <div class="field">
+            <input type="text" name="" id="userval">
+            <div id="err"></div>
+        </div>
+        <div class="field">
+            <button>Check</button>
+        </div>
+        <div class="field">
+            <p>You entered : <i></i></p>
+        </div>
+    </form>
+
+    <script>
+        function checkValidate() {
+            let inp = document.getElementById("userval")
+            if (inp.value == "") {
+                // alert("Enter Value")
+                document.getElementById("err").innerHTML = "Enter Value!!!!"
+                // inp.style.borderColor = "red"
+                inp.classList.add("error")
+            } else {
+                document.querySelector("i").innerHTML = inp.value
+                document.getElementById("err").innerHTML = null
+                document.getElementById("userval").value = ""
+                // inp.style.borderColor = "unset"
+                inp.classList.remove("error")
+            }
+
+            return false
+        }
+    </script>
+</body>
+
+</html>

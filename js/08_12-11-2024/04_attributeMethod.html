@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .setimg {
+            width: 400px;
+            border: 10px groove crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="set()">set attribute</button>
+    <button onclick="del()">remove attribute</button>
+    <button onclick="getimg()">get attribute</button>
+
+    <hr>
+    <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+        alt="" width="600px" id="myimg">
+
+    <script>
+        function set() {
+            let myimg = document.getElementById("myimg");
+            myimg.setAttribute("class", "setimg")
+        }
+        function del() {
+            let myimg = document.getElementById("myimg");
+            myimg.removeAttribute("class")
+        }
+        function getimg() {
+            let myimg = document.getElementById("myimg");
+            let g = myimg.getAttribute("src");
+            alert(g)
+        }
+    </script>
+</body>
+
+</html>

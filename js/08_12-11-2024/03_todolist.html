@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li::marker {
+            content: "😍";
+        }
+
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="" id="todo">
+        <button onclick="return setElement()">Add Todo's</button>
+    </div>
+
+    <ul id="list">
+        <li>My list <span>&Cross;</span></li>
+    </ul>
+
+    <script>
+        function setElement() {
+            let li = document.createElement("li")
+            let inp = document.getElementById("todo").value
+            let text = document.createTextNode(inp)
+            li.append(text);
+            let mylist = document.getElementById("list")
+            mylist.append(li);
+            document.getElementById("todo").value = ""
+        }
+    </script>
+</body>
+
+</html>

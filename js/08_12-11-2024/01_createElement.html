@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="setElement()">Click Here</button>
+
+    <div id="list">
+        <p style="color: blue;">This is my new paragraph</p>
+    </div>
+
+    <script>
+        // function setElement() {
+        //     let mylist = document.getElementById("list")
+        //     mylist.innerHTML += `
+        //         <p>Add Element Dynamically</p>
+        //     `
+        // }
+
+        function setElement() {
+            let para = document.createElement("p")
+            let text = document.createTextNode("Add Element Dynamically")
+            para.append(text);
+            let mylist = document.getElementById("list")
+            mylist.append(para)
+        }
+    </script>
+</body>
+
+</html>
