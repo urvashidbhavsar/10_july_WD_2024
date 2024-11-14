@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            display: grid;
+            place-content: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="count"></div>
+
+    <script>
+        var div = document.getElementById("count")
+        var start = 100;
+        var startcount = setInterval(() => {
+            div.innerHTML = ++start;
+            if (start == 500) {
+                clearInterval(startcount)
+            }
+        }, 500);
+    </script>
+</body>
+
+</html>

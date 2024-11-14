@@ -27,7 +27,7 @@
     </div>
 
     <ul id="list">
-        <li>My list <span>&Cross;</span></li>
+        <li>My list <span>❌</span></li>
     </ul>
 
     <script>
@@ -38,6 +38,11 @@
             li.append(text);
             let mylist = document.getElementById("list")
             mylist.append(li);
+
+            let span = document.createElement("span");
+            let ctext = document.createTextNode("❌");
+            span.append(ctext);
+            li.append(span)
             document.getElementById("todo").value = ""
         }
     </script>

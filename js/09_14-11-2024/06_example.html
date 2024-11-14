@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="n1" placeholder="1st" onchange="return addition()">
+    <input type="text" name="" id="n2" placeholder="2nd" onchange="return addition()">
+
+    <p id="sum"> </p>
+
+    <script>
+        function addition() {
+            let n1 = document.getElementById("n1")
+            let n2 = document.getElementById("n2")
+
+            res = Number(n1.value) + Number(n2.value)
+            document.getElementById("sum").innerHTML = res
+        }
+    </script>
+</body>
+
+</html>
