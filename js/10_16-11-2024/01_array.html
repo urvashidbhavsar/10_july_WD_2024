@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // create array of furniture value.
+        var furniture = ["Chair", "Table", "Cupboard", "Dining Table", "Dressing Table", "Seating Table"]
+
+        // fetch every value from Array collection and display.
+        console.log(furniture);
+        console.log(furniture[0]);
+        console.log(furniture[2]);
+
+        // use loop for fetch all value from Array, using for of loop
+        console.log("----------For of-------------");
+        for (const fur of furniture) {
+            console.log(fur);
+        }
+        // foreach 
+        console.log("-----------foreach------------");
+        furniture.forEach(fur => {
+            console.log(fur);
+        })
+        //using for loop
+        console.log("-----------for loop------------");
+        for (let i = 0; i < furniture.length; i++) {
+            console.log(`${i + 1} => ${furniture[i]}`);
+        }
+    </script>
+</body>
+
+</html>

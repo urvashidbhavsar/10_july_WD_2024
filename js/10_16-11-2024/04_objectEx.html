@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .CardData {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .card {
+            border: 1px solid gray;
+            box-shadow: 0 0 5px gray;
+        }
+
+        .card-details {
+            padding: 20px;
+        }
+
+        .desc {
+            padding: 10px 0;
+        }
+
+        .price {
+            font-size: 30px;
+            padding: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="CardData" id="carddata"></div>
+
+    <script>
+        var product = [
+            {
+                id: 1,
+                img: "https://m.media-amazon.com/images/I/61NIN9D9wjL._SX679_.jpg",
+                title: "JBL Quantum 910 Wireless Over Ear Gaming Headset",
+                description: "Ear Gaming Headset with Mic, ANC, 50mm Neodymium Drivers, Spatial Audio, Integrated Head Tracking, 39H Playtime, Low Latency, Boom Mic, 2.4GHz Wireless Dongle (Black)",
+                brand: "JBL",
+                price: "16,834",
+            },
+            {
+                id: 2,
+                img: "https://m.media-amazon.com/images/I/81nEx+Nxw9L._SY450_.jpg",
+                title: "Corsair Katar Pro Ultra-Light Optical USB Gaming Mouse",
+                description: "USB Gaming Mouse with Backlit RGB LED, 12400 DPI (Black)",
+                brand: "Corsair",
+                price: "1,608",
+            },
+            {
+                id: 3,
+                img: "https://m.media-amazon.com/images/I/61Hlk9-4m1L._SX679_.jpg",
+                title: "Razer Huntsman Mini - Mercury Edition - 60% Optical Gaming Keyboard (Clicky Purple Switch) - FRML Packaging",
+                description: "Faster Than Traditional Mechanical Switches: Razer Linear Optical switch technology uses optical beam-based actuation, registering key presses at the speed of light (15-30% shorter actuation distance than other linear switches at 10 mm)",
+                brand: "Razer",
+                price: "7,999",
+            }
+        ]
+
+        let p = document.getElementById("carddata")
+        for (const mypro of product) {
+            p.innerHTML += `
+                <div class="card">
+                    <img src="${mypro.img}" alt="">
+                    <div class="card-details">
+                        <h2 class="title">${mypro.title}</h2>
+                        <div class="desc">${mypro.description}</div>
+                        <div class="brand">
+                            <b>Brand :</b> ${mypro.brand}
+                        </div>
+                        <div class="price">
+                            <sup>&#8377;</sup>${mypro.price}
+                        </div>
+                        <button>Add to cart</button>
+                    </div>
+                </div> `
+        }
+    </script>
+</body>
+
+</html>

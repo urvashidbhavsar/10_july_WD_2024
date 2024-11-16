@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // object create
+        var emp = {
+            // key : value
+            firstname: "Abc",
+            lastname: "Xyz",
+            mobileno: 9898989898,
+        }
+        console.log(emp);
+        // print object value using its key
+        document.writeln(emp.firstname)
+        document.writeln(emp.lastname)
+        document.writeln(emp.mobileno)
+
+        // call all key value from object using loop 
+        for (const e in emp) {
+            if (Object.prototype.hasOwnProperty.call(emp, e)) {
+                console.log(`${e} => ${emp[e]}`);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
