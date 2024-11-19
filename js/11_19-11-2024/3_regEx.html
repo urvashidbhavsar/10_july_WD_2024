@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "Hello World"
+        var ptn = /^[a-z\s]*$/i
+        if (ptn.test(str)) {
+            console.log("match");
+        } else {
+            console.log("not match");
+        }
+
+        // match method effected only with string value.
+        // so if we check number or match number use test() method 
+        var num = 3422233;
+        var ptn = /^[0-9]*$/
+        // if (num.match(ptn)) {
+        if (ptn.test(num)) {
+            console.log("match");
+        } else {
+            console.log("not match");
+        }
+
+        // replace 
+        var sen = "This is a JavaScript Language";
+        // var change = sen.replace("JavaScript", "TypeScript")
+        var change = sen.replace(/[a]/g, "__")
+        console.log(sen);
+        console.log(change);
+
+    </script>
+</body>
+
+</html>
