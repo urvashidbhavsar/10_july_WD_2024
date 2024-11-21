@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.regform {
+    width: 500px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px auto;
+}
+
+.row {
+    padding: 5px 0;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.msg {
+    color: red;
+    font-size: 14px;
+}
+
+.error {
+    border-color: red !important;
+}
+
+input[type="text"] {
+    height: 25px;
+    width: 90%;
+    padding: 5px 10px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:active {
+    scale: 0.9;
+}

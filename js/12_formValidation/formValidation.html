@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="regform">
+        <h3>Employee Registration</h3>
+        <form action="#" method="get">
+            <div class="row">
+                <!-- implement on tab = onblur="return checkValidate()" -->
+                <input type="text" name="" id="username" placeholder="Enter Full Name" onkeyup="return checkNamePtn()"
+                    class="upprchange" maxlength="30" oninput="checkptn()">
+                <div class="msg" id="msg1"></div>
+            </div>
+            <div class="row">
+                <input type="text" name="" id="email" placeholder="Enter Email">
+                <div class="msg" id="msg2"></div>
+            </div>
+            <div class="row">
+                <button onclick="return checkValidate()">Check</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
