@@ -19,8 +19,52 @@
                 <div class="msg" id="msg1"></div>
             </div>
             <div class="row">
-                <input type="text" name="" id="email" placeholder="Enter Email">
+                <input type="text" name="" id="email" placeholder="Enter Email" onkeyup="return checkEmail()">
                 <div class="msg" id="msg2"></div>
+            </div>
+            <div class="row">
+                <input type="text" name="" id="number" placeholder="Enter Mobile No" onkeyup="return checknumber()"
+                    maxlength="10">
+                <div class="msg" id="msg3"></div>
+            </div>
+            <div class="row">
+                <input type="password" name="" id="pass" placeholder="Enter Password" onkeyup="return checkpassword()">
+                <div class="msg" id="msg4"></div>
+            </div>
+            <div class="row">
+                <input type="password" name="" id="cpass" placeholder="Enter Confirm Password"
+                    onkeyup="return recheck()">
+                <div class="msg" id="msg5"></div>
+            </div>
+            <div class="row">
+                Gender :
+                <input type="radio" name="gen" id="male"> Male
+                <input type="radio" name="gen" id="female"> Female
+                <div class="msg" id="msg6"></div>
+            </div>
+            <div class="row">
+                Qualification :
+                <input type="checkbox" name="" id="c1"> 10th
+                <input type="checkbox" name="" id="c2"> 12th
+                <input type="checkbox" name="" id="c3"> betchlor
+                <div class="msg" id="msg7"></div>
+            </div>
+            <div class="row">
+                City :
+                <select name="" id="">
+                    <option value="">---select---</option>
+                    <option value="">Surat</option>
+                    <option value="">Bhuj</option>
+                </select>
+                <div class="msg" id="msg8"></div>
+            </div>
+            <div class="row">
+                Upload Resume :
+                <input type="file" name="" id="file">
+                <div class="msg" id="msg9"></div>
+            </div>
+            <div class="row">
+                <input type="checkbox" onclick="show()"> Show Password
             </div>
             <div class="row">
                 <button onclick="return checkValidate()">Check</button>
