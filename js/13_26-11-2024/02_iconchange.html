@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: 300px;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .card {
+            margin: 50px;
+            width: 400px;
+            border: 1px solid gray;
+            box-shadow: 0 0 5px gray;
+        }
+
+        .card-details {
+            padding: 20px;
+        }
+
+        .desc {
+            padding: 10px 0;
+        }
+
+        .price {
+            font-size: 30px;
+            padding: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+        i {
+            font-size: 50px;
+        }
+
+        /* set class for change theme */
+        .settheme {
+            background-color: black;
+            color: white;
+        }
+
+        .settheme .card {
+            background-color: #2e2e2e;
+        }
+
+        .settheme button {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+</head>
+
+<body>
+    <div onclick="changeTheme('icon')" role="button">
+        <i class="fa-regular fa-moon" id="icon"></i>
+        <!-- <i class="fa-regular fa-sun"></i> -->
+    </div>
+
+    <div class="card">
+        <img src="https://img.freepik.com/free-photo/vibrant-autumn-maple-leaves-nature-beauty-showcased-generated-by-ai_188544-15039.jpg"
+            alt="">
+        <div class="card-details">
+            <h2 class="title">My Card</h2>
+            <div class="desc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas facilis placeat laudantium perspiciatis
+                totam quo.
+            </div>
+            <div class="brand">
+                <b>Brand :</b> Abc
+            </div>
+            <div class="price">
+                <sup>&#8377;</sup> 45,333
+            </div>
+            <button>Add to cart</button>
+        </div>
+    </div>
+
+    <script>
+        function changeTheme(icon) {
+            let i = document.getElementById(icon)
+            document.body.classList.toggle("settheme")
+
+            if (document.body.classList.contains("settheme")) {
+                i.classList.remove("fa-moon")
+                i.classList.add("fa-sun")
+            } else {
+                i.classList.remove("fa-sun")
+                i.classList.add("fa-moon")
+            }
+        }
+    </script>
+</body>
+
+</html>

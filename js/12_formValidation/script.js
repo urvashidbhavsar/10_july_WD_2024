@@ -2,6 +2,7 @@
 function checkValidate() {
     let user = document.getElementById("username")
     let email = document.getElementById("email")
+    let upload = document.getElementById("file")
     if (user.value == "") {
         document.getElementById("msg1").innerHTML = "Enter name"
         user.classList.add("error")
@@ -10,8 +11,31 @@ function checkValidate() {
         document.getElementById("msg2").innerHTML = "Enter Email"
         email.classList.add("error");
     }
+    if(upload.value == ""){
+        document.getElementById("msg9").innerHTML = "Select file"
+    }
     return false
 }
+function checkvalidation() {
+    let m = document.getElementById("male");
+    let f = document.getElementById("female");
+    let c1 = document.getElementById("c1"), c2 = document.getElementById("c2"),
+        c3 = document.getElementById("c3");
+    let select = document.getElementById("cityselect");
+    if (m.checked == false && f.checked == false) {
+        document.getElementById("msg6").innerHTML = "Select Gender"
+    } else if (c1.checked == false && c2.checked == false && c3.checked == false) {
+        document.getElementById("msg7").innerHTML = "Select Value!!!"
+    } else if (select.value == "-1") {
+        document.getElementById("msg8").innerHTML = "Select City!!!"
+    } else {
+        document.getElementById("msg6").innerHTML = null
+        document.getElementById("msg7").innerHTML = null
+        document.getElementById("msg8").innerHTML = null
+    }
+    return false
+}
+
 
 // onchange / onkeyup = check pattern
 function checkNamePtn() {

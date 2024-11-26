@@ -38,21 +38,21 @@
             </div>
             <div class="row">
                 Gender :
-                <input type="radio" name="gen" id="male"> Male
+                <input type="radio" name="gen" id="male" onblur="return checkvalidation()"> Male
                 <input type="radio" name="gen" id="female"> Female
                 <div class="msg" id="msg6"></div>
             </div>
             <div class="row">
                 Qualification :
-                <input type="checkbox" name="" id="c1"> 10th
-                <input type="checkbox" name="" id="c2"> 12th
-                <input type="checkbox" name="" id="c3"> betchlor
+                <input type="checkbox" name="" id="c1" onblur="return checkvalidation()"> 10th
+                <input type="checkbox" name="" id="c2" onblur="return checkvalidation()"> 12th
+                <input type="checkbox" name="" id="c3" onblur="return checkvalidation()"> betchlor
                 <div class="msg" id="msg7"></div>
             </div>
             <div class="row">
                 City :
-                <select name="" id="">
-                    <option value="">---select---</option>
+                <select name="" id="cityselect">
+                    <option value="-1">---select---</option>
                     <option value="">Surat</option>
                     <option value="">Bhuj</option>
                 </select>
