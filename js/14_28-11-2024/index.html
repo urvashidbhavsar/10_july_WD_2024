@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .sliderbox {
+            position: relative;
+        }
+
+        .slider {
+            position: absolute;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 580px;
+            object-fit: cover;
+            animation: fade 1s ease;
+        }
+
+        .controls {
+            position: absolute;
+            top: 260px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            margin: 10px;
+            height: 60px;
+            width: 60px;
+            background-color: rgba(0, 0, 0, 0.723);
+            color: white;
+            font-size: 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        button:active {
+            scale: 0.9;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sliderbox">
+        <div class="slider">
+            <img src="https://www.itcsales.co.uk/blog/wp-content/uploads/2018/05/Free-Desktop-Wallpaper-HD-1920-x-1080-7.jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://cdn.pixabay.com/photo/2022/10/03/21/47/fog-7496901_1280.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="https://images.pexels.com/photos/1064162/pexels-photo-1064162.jpeg?cs=srgb&dl=pexels-eberhardgross-1064162.jpg&fm=jpg"
+                alt="">
+        </div>
+        <div class="slider">
+            <img src="https://live.staticflickr.com/4232/35623383532_31c9ccf0f4_h.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="https://www.cardiffmtc.org.uk/media/2015/06/desktop-wallpaper-hd-full-screen-flowers-background-3d-full-hd-wallpaper-download-for-pc-android-mobile-wallpapers-windows-7-name-nature-animation.jpg"
+                alt="">
+        </div>
+
+        <div class="controls">
+            <button onclick="change(-1)">&lt;</button>
+            <button onclick="change(1)">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        let sliderIndex = 0;
+        slider(sliderIndex)
+
+        function change(x) {
+            slider(sliderIndex += x)
+        }
+
+        
+        function slider(n) {
+            let slider = document.querySelectorAll(".slider")
+            console.log(n)
+            if (n == slider.length) {
+                n = 0
+                sliderIndex = 0
+            }
+            if (n < 0) {
+                n = slider.length
+                sliderIndex = slider.length
+            }
+            for (let i = 0; i < slider.length; i++) {
+                slider[i].style.display = "none"
+            }
+            slider[sliderIndex].style.display = "block"
+        }
+    </script>
+</body>
+
+</html>
