@@ -1,0 +1,191 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(24, 24, 24);
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+.button {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.cards__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 1st left and right slide */
+.box:nth-child(2n) {
+    transform: scale(0.85);
+    z-index: -1;
+}
+
+/* 2nd left and right slide */
+.box:nth-child(4n+1) {
+    transform: scale(0.75);
+    z-index: -2;
+}
+
+.box:nth-child(1) {
+    background-color: darkorange;
+}
+
+.box:nth-child(2) {
+    background-color: brown;
+}
+
+.box:nth-child(3) {
+    background-color: darkmagenta;
+}
+
+.box:nth-child(4) {
+    background-color: crimson;
+}
+
+.box:nth-child(5) {
+    background-color: darkgreen;
+}
+
+.box6 {
+    background-color: deeppink;
+}
+
+.box7 {
+    background-color: olive;
+}
+
+.box--hide {
+    display: none;
+}
+
+.move-out-from-left,
+.move-out-from-right {
+    animation: moveOut 0.5s ease-in-out both;
+}
+
+.move-to-position1-from-left,
+.move-to-position1-from-right {
+    animation: moveToP1 0.5s ease-in-out both;
+}
+
+.move-to-position2-from-left,
+.move-to-position2-from-right {
+    animation: moveToP2 0.5s ease-in-out both;
+}
+
+.move-to-position3-from-left,
+.move-to-position3-from-right {
+    animation: moveToP3 0.5s ease-in-out both;
+}
+
+.move-to-position4-from-left,
+.move-to-position4-from-right {
+    animation: moveToP4 0.5s ease-in-out both;
+}
+
+.move-to-position5-from-left,
+.move-to-position5-from-right {
+    animation: moveToP5 0.5s ease-in-out both;
+}
+
+:root {
+    --translate-x: 100px;
+}
+
+@keyframes moveOut {
+    0% {
+        transform: scale(0.75);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.5) translateX(var(--translate-x, 150%));
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(0.25);
+        opacity: 0;
+    }
+}
+
+@keyframes moveToP1 {
+    from {
+        transform: scale(0.75) translateX(var(--translate-x, -100%));
+    }
+
+    to {
+        transform: scale(0.75);
+    }
+}
+
+@keyframes moveToP2 {
+    from {
+        transform: scale(0.75) translateX(var(--translate-x, -100%));
+    }
+
+    to {
+        transform: scale(0.85);
+    }
+}
+
+@keyframes moveToP3 {
+    from {
+        transform: scale(0.85) translateX(var(--translate-x, -100%));
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes moveToP4 {
+    from {
+        transform: scale(1) translateX(var(--translate-x, -100%));
+    }
+
+    to {
+        transform: scale(0.85);
+    }
+}
+
+@keyframes moveToP5 {
+    from {
+        transform: scale(0.85) translateX(var(--translate-x, -100%));
+    }
+
+    to {
+        transform: scale(0.75);
+    }
+}
