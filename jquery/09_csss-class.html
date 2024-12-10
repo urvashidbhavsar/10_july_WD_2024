@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            font-size: 40px;
+            color: white;
+            background-color: darkblue;
+            padding: 20px;
+        }
+
+        .title2 {
+            font-size: 45px;
+            color: white;
+            background-color: darkturquoise;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <button id="btn1">add class</button>
+    <button id="btn2">remove class</button>
+    <button id="btn3">toggle class</button>
+    <button id="btn4">has class</button>
+    <hr>
+
+    <h1 id="head1">Hello world</h1>
+    <h1 id="head2">Hello world</h1>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#head1").addClass("title")
+            })
+            $("#btn2").click(function () {
+                $("#head1").removeClass("title")
+            })
+            $("#btn3").click(function () {
+                $("#head2").toggleClass("title2");
+            })
+            $("#btn4").click(function () {
+                if ($("#head2").hasClass("title2")) {
+                    alert("exist")
+                } else {
+                    alert("not exist")
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <button id="btn">click</button>
+
+    <hr>
+    <h1>Hello world</h1>
+
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("h1").hide(2000, function () {
+                    // alert("task completed")
+                    $("h1").show(function () {
+                        $("h1").fadeOut()
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

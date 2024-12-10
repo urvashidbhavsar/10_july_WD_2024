@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 150px;
+            width: 150px;
+            background-color: brown;
+        }
+
+        .div2 {
+            height: 150px;
+            width: 150px;
+            background-color: rgb(53, 24, 157);
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <!-- this function are mainly effected on element height and width -->
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Toggle</button>
+    <hr>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $(".div1").hide(2000);
+            })
+            $("#btn2").click(function () {
+                $(".div1").show(2000);
+            })
+            $("#btn3").click(function () {
+                $(".div2").toggle(2000);
+            })
+        })
+    </script>
+</body>
+
+</html>

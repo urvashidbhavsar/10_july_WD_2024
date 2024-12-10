@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <div></div>
+
+    <script>
+        $(function () {
+            $("div").animate({
+                translate: "400px",
+                rotate: "360deg",
+                // transform: "translateY(400px)"
+                // marginLeft: "400px"
+                borderRadius: "40px",
+                padding: "30px"
+            }, 5000, function () {
+                $("div").animate({
+                    translate: "0",
+                    rotate: "-360deg",
+                    borderRadius: "0",
+                    padding: "0"
+                }, 5000).css("background-color", "#45e321")
+            }).css("background-color", "#aabb12")
+        })
+    </script>
+</body>
+
+</html>
