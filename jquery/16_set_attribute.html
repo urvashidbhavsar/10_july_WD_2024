@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">text</button>
+    <button id="btn2">html</button>
+    <button id="btn3">value</button>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <input type="text" name="" id="" readonly>
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            var text = "Hello world"
+            $("#btn1").click(function () {
+                $("#p1").text(`<u>${text}</u>`)
+            })
+            $("#btn2").click(function () {
+                $("#p2").html(`<u>${text}</u>`)
+            })
+            $("#btn3").click(function () {
+                $("input").val(text)
+                // var inp = $("input").val() 
+            })
+        })
+    </script>
+</body>
+
+</html>

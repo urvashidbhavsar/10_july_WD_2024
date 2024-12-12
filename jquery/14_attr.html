@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <button id="btn1">add attribute</button>
+    <button id="btn2">get attribute</button>
+    <button id="btn3">remove attribute</button>
+
+    <hr>
+    <img src="https://cdn.pixabay.com/photo/2024/01/02/14/58/leaf-8483401_640.jpg" alt="">
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("img").attr("width", 400)
+            })
+            $("#btn2").click(function () {
+                alert($("img").attr("src"))
+            })
+            $("#btn3").click(function () {
+                $("img").removeAttr("width")
+            })
+        })
+    </script>
+</body>
+
+</html>

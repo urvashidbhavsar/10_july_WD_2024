@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div2 {
+            height: 200px;
+            width: 300px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+        $(function () {
+            $("#div1").height(100).width(100).css("border", "1px solid black")
+        })
+
+        $(function () {
+            // $("#div2").mouseover(function () {
+            // })
+            var txt = ""
+            txt = `Height : ${$("#div2").height()} <br>
+            Width : ${$("#div2").width()} <br>
+            innerWidth(padding): ${$("#div2").innerWidth()} <br>
+            innerHeight(padding): ${$("#div2").innerHeight()} <br>
+            outerWidth(border): ${$("#div2").outerWidth()} <br>
+            outerHeight(border): ${$("#div2").outerHeight()} <br>
+            outerWidth(margin): ${$("#div2").outerWidth(true)} <br>
+            outerHeight(margin): ${$("#div2").outerHeight(true)}  `
+
+
+            $("#div2").html(txt)
+        })
+    </script>
+</body>
+
+</html>
