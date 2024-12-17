@@ -58,11 +58,7 @@ there is many functions are provided by jquery.
 21. ajax 
 	load, ajax
 
-
-
-
-
-
+==========================
 
 $(document).ready(function(){
     $("selector").event(function(){

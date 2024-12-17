@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .cardDesign {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 50px;
+            gap: 10px;
+        }
+
+        .card {
+            border: 1px solid black;
+        }
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .card-data {
+            padding: 10px;
+        }
+
+        .des,
+        .price {
+            padding: 5px 0
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <div class="cardDesign"></div>
+
+    <script>
+        $(function () {
+            $(window).on('load', function () {
+                $.ajax({
+                    url: "https://fakestoreapiserver.reactbd.com/amazonproducts",
+                    type: "GET",
+                    success: function (result) {
+                        let alldata = ""
+                        for (let i = 0; i < result.length; i++) {
+                            console.log(result[i]);
+                            // de-structuring
+                            const { id, title, price, description, category, image, rating } = result[i]
+                            alldata += `
+                                <div class="card">
+                                    <img src=${image} alt="">
+                                    <div class="card-data">
+                                        <h2 class="title">${title}</h2>
+                                        <div class="des">${description}</div>
+                                        <div class="cat">Categories : ${category} </div>
+                                        <div class="price">&#8377; 
+                                            ${price}</div>
+                                        <div class="rate"> Rating : ${rating.rate}</div>
+                                    </div>
+                                </div>`
+                        }
+                        $(".cardDesign").append(alldata)
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>

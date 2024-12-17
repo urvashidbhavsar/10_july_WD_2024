@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,
+        ul,
+        li {
+            border: 2px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <button id="btn1">click</button>
+    <hr>
+
+    <div class="main">Main
+        <div class="sub">Sub
+            <ul>
+                <li>List 1</li>
+                <li>List 2</li>
+            </ul>
+            <div class="side">
+                div tag
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                // single
+                // $("li").parent(".sub").css("border", "2px solid red")
+                // from parent chain
+                // $("li").parents(".sub").css("border", "2px solid red")
+                // $("li").parentsUntil(".main").css("border", "2px solid red")
+
+                // single child
+                // $(".main").children().css("border", "2px solid red")
+                $(".main").find(".side").css("border", "2px solid red")
+            })
+        })
+    </script>
+</body>
+
+</html>
