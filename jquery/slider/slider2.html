@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css" />
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .bx-wrapper {
+            border: none !important;
+        }
+
+        .slider1 {
+            background: url(https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75) no-repeat center/cover rgba(37, 37, 46, 0.7);
+        }
+
+        .slider2 {
+            background: url(https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_640.jpg) no-repeat center/cover rgba(37, 37, 46, 0.7);
+        }
+
+        .slider3 {
+            background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg) no-repeat center/cover rgba(37, 37, 46, 0.7);
+        }
+
+        .slider {
+            padding: 200px 0;
+            background-blend-mode: multiply;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bxslider">
+        <div class="slider1 slider">
+            <h1>Image 1</h1>
+        </div>
+        <div class="slider2 slider">
+            <h1>Image 2</h1>
+        </div>
+        <div class="slider3 slider">
+            <h1>Image 3</h1>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                auto: true,
+            });
+        });
+    </script>
+</body>
+
+</html>

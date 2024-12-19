@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css" />
+    <style>
+        * {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .bx-wrapper {
+            border: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bxslider">
+        <div>
+            <img
+                src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" />
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" />
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_640.jpg" />
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                auto: true,
+            });
+        });
+    </script>
+</body>
+
+</html>
