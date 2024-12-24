@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" height="300px" width="300px"></canvas>
+
+    <script>
+        let rect = document.getElementById("mycanvas")
+        let draw = rect.getContext("2d")
+        draw.fillStyle = "blue"
+        draw.strokeStyle = "red"
+        draw.lineWidth = 5;
+        draw.fillRect(10, 10, 100, 100)
+        draw.strokeRect(10, 10, 100, 100)
+    </script>
+</body>
+
+</html>
