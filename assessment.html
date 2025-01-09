@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            width: 75%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            background-image: linear-gradient(rgb(199, 180, 32), rgb(186, 38, 154), green);
+        }
+
+        .inputdiv {
+            width: fit-content;
+            margin: auto;
+            padding: 10px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+
+        input {
+            border: 1px solid brown;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: rgb(12, 65, 67);
+            color: beige;
+            border-radius: 5px;
+        }
+
+        #delete {
+            background-color: bisque;
+            color: black;
+        }
+
+        .display {
+            display: flex;
+            gap: 20px;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <div class="main">
+        <div class="userdiv">
+            <h1>Enter the Title and Image </h1><br>
+            <div class="inputdiv">
+                <input type="text" name="" id="title" placeholder="Enter Title name">
+                <input type="file" name="" id="image" accept=".jpg,.png,.jpeg"><br>
+                <button id="btnadd">Add</button>
+            </div>
+            <div class="display"></div>
+        </div>
+    </div>
+
+    <script>
+
+        $(function () {
+            $("#btnadd").click(function () {
+                let title = $("#title").val();
+                let image = $("#image")[0].files[0];
+
+                if (title == "" && !image) {
+                    alert("Please Enter Title and Image");
+                } else if (title == "") {
+                    alert("Please Enter Title");
+                } else if (!image) {
+                    alert("Please select an image");
+                } else {
+                    if (confirm("Confirmation Message for Add")) {
+                        var reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            $(".display").append(`
+                                <div>
+                                    <h3>${title}</h3>
+                                    <img src="${e.target.result}" width="200" height="200"><br>
+                                    <button class="delete">Remove</button>
+                                </div>
+                            `);
+                            $("#title").val('');
+                            $("#image").val('');
+                        };
+                        reader.readAsDataURL(image);
+                    }
+                }
+            });
+
+            $(".display").on("click", ".delete", function () {
+                $(this).parent().remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

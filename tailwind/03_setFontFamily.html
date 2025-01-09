@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+VN&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+         body{
+            font-family: "Playwrite VN";
+         }
+        }
+      </style>
+    <!-- for customize code -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 class="text-5xl fontFamily-[fontplay] text-clifford">Hello world</h1>
+
+   <div class="m-5">
+    <button class="py-2 px-5 bg-emerald-900 text-white border-2 border-solid border-emerald-900 rounded hover:bg-white hover:text-emerald-900 duration-200 ease-in">click here</button>
+    </div>
+</body>
+</html>

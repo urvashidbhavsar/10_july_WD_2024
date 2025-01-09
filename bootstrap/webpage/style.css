@@ -18,3 +18,41 @@ ul {
 .nav-link:hover {
     color: crimson !important;
 }
+
+.slider1 {
+    background: url(https://p.w3layouts.com/demos_new/template_demo/18-02-2020/handler-liberty-demo_Free/1645559519/web/assets/images/bg.jpg) no-repeat center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider2 {
+    background: url(https://p.w3layouts.com/demos_new/template_demo/18-02-2020/handler-liberty-demo_Free/1645559519/web/assets/images/bg1.jpg) no-repeat center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider3 {
+    background: url(https://p.w3layouts.com/demos_new/template_demo/18-02-2020/handler-liberty-demo_Free/1645559519/web/assets/images/bg2.jpg) no-repeat center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+.slider4 {
+    background: url(https://p.w3layouts.com/demos_new/template_demo/18-02-2020/handler-liberty-demo_Free/1645559519/web/assets/images/bg3.jpg) no-repeat center/cover rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+}
+
+@media (max-width:576px) {
+    .slider {
+        padding: 70px 50px;
+    }
+}
+
+@media (min-width:576px) {
+    .slider {
+        padding: 70px 80px;
+    }
+}
+
+@media (min-width:576px) {
+    .slider {
+        padding: 150px 120px;
+    }
+}
