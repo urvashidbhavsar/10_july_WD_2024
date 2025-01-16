@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.positionAbsoluteGroup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.card {
+    border: 2px solid red;
+    width: 400px;
+    margin: auto;
+    position: relative;
+
+    &:hover .text {
+        scale: 1
+    }
+
+    .text {
+        .positionAbsoluteGroup();
+        background-color: rgba(0, 0, 0, 0.7);
+        display: grid;
+        place-content: center;
+        scale: 0;
+        transition: 1s ease;
+
+        button {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+}
