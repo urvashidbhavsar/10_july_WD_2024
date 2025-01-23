@@ -1,0 +1,25 @@
+div {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+@mixin themebox($bg: blue, $color: white) {
+    background-color: $bg;
+    box-shadow: 0 0 10px $bg;
+    outline: 5px dashed $bg;
+    outline-offset: 2px;
+    color: $color;
+}
+
+.div1 {
+    @include themebox()
+}
+
+.div2 {
+    @include themebox(red, blue)
+}
+
+.div3 {
+    @include themebox(green)
+}

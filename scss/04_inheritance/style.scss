@@ -1,0 +1,29 @@
+@use "sass:math";
+
+body {
+    font-family: sans-serif;
+}
+
+@mixin alertTheme($bg, $color) {
+    background-color: $bg;
+    color: $color;
+}
+
+%spacing {
+    padding: 20px;
+    font-size: 30px;
+    margin: 10px
+}
+
+.alert {
+    @extend %spacing
+}
+
+.alert-primary {
+    @include alertTheme(salmon, black);
+    width: math.div(5vw, 9vw) * 100%;
+}
+
+.alert-secondary {
+    @include alertTheme(teal, white)
+}
